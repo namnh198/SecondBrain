@@ -1,6 +1,5 @@
 ---
 title: 11ty and Nunjuck
-slug: 11ty-and-nunjuck
 createDate: 2023-11-18
 published: true
 tags:

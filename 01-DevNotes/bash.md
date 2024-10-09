@@ -1,6 +1,5 @@
 ---
 title: Bash (Unix Shell)
-slug: bash
 tags:
   - Linux
   - MacOS

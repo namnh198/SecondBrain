@@ -1,6 +1,5 @@
 ---
 title: REST API with cURL
-slug: curl-api
 published: true
 createDate: 2022-01-05
 tags:

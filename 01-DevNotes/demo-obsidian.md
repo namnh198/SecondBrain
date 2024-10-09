@@ -1,6 +1,5 @@
 ---
 title: Demo Obsidian
-slug: demo-obsidian
 tags:
   - AI
   - Algorithms

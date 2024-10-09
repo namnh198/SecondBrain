@@ -1,6 +1,5 @@
 ---
 title: Installing Magento via Docker
-slug: install-magento-docker
 published: true
 createDate: 2023-10-30T00:00:00
 tags:

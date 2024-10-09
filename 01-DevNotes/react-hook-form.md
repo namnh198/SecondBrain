@@ -1,6 +1,5 @@
 ---
 title: React Hook Form & Related Things
-slug: react-hook-form
 published: true
 draft: true
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Prompts & Tips OpenAI
-slug: prompts-openai
 tags:
   - AI
   - MLOps

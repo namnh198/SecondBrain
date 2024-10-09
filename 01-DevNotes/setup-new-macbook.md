@@ -1,6 +1,5 @@
 ---
 title: Setup New Macbook
-slug: setup-new-macbook
 draft: true
 createDate: 2023-10-30
 tags:

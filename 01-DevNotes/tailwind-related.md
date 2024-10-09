@@ -1,6 +1,5 @@
 ---
 title: Tailwind & Related Things
-slug: tailwind-related
 published: true
 draft: true
 createDate: 2024-03-23

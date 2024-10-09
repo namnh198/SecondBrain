@@ -1,6 +1,5 @@
 ---
 title: Git
-slug: git
 published: true
 verified: true
 tags:

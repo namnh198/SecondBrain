@@ -1,6 +1,5 @@
 ---
 title: Docker
-slug: docker
 published: true
 tags:
   - Linux

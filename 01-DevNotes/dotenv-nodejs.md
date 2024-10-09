@@ -1,6 +1,5 @@
 ---
 title: ENV in Node.Js
-slug: dotenv-nodejs
 tags:
   - Backend
   - Web-Dev

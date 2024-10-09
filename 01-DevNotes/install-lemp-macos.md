@@ -1,6 +1,5 @@
 ---
 title: Install LEMP on MacOS
-slug: install-lemp-macos
 createDate: 2023-10-29
 published: true
 ---

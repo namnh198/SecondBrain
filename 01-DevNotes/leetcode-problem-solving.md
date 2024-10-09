@@ -1,6 +1,5 @@
 ---
 title: Leetcode Problem Solving
-slug: leetcode-problem-solving
 published: true
 createDate: 2023-07-15
 tags:

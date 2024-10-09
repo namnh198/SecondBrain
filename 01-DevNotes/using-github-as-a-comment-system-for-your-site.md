@@ -1,6 +1,5 @@
 ---
 title: Using Github as a Comment system for your site
-slug: using-github-as-a-comment-system-for-your-site
 tags:
   - Web-Dev
   - SSG

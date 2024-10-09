@@ -1,6 +1,5 @@
 ---
 title: Manage Dotfiles with STOW & GIT
-slug: manage-dotfiles
 createDate: 2024-08-10
 draft: true
 ---

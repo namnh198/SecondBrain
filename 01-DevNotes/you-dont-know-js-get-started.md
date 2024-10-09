@@ -1,6 +1,5 @@
 ---
 title: You Don't Know JS - Get Started
-slug: you-dont-know-js-get-started
 tags:
   - Reading
   - Web-Dev

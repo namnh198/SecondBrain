@@ -1,6 +1,5 @@
 ---
 title: DDEV & Related Things
-slug: ddev-related
 published: true
 draft: true
 createDate: 2024-05-25

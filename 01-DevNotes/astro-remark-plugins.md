@@ -1,6 +1,5 @@
 ---
 title: Astro Remark Plugins
-slug: astro-remark-plugins
 tags:
   - Web-Dev
   - SSG

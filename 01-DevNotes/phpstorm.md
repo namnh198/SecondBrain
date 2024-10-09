@@ -1,6 +1,5 @@
 ---
 title: PHPStorm
-slug: phpstorm
 createDate: 2022-11-14
 published: true
 tags:

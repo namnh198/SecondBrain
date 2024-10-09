@@ -1,6 +1,5 @@
 ---
 title: Terminal & ZSH
-slug: terminal-zsh
 published: true
 createDate: 2024-04-19T00:00:00
 tags:
