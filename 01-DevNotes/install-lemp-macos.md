@@ -3,7 +3,7 @@ title: Install LEMP on MacOS
 createDate: 2023-10-29
 published: true
 ---
-Setup LEMP (Nginx, MySQL, multiple PHP) on MacOS. In the end, you'll have a robust, clean and fast local web development environment on Mac's M chip or Intel
+- [x] Setup LEMP (Nginx, MySQL, multiple PHP) on MacOS. In the end, you'll have a robust, clean and fast local web development environment on Mac's M chip or Intel
 
 > [!note] Verified It's working on MacOS Soloma
 ## Software needs to install:
