@@ -8,6 +8,7 @@ createDate: 2024-08-20
 ---
 
 Bash command are mainly supported MacOS, Linux. On Windows, you can use WSL, it's easy to setup and can use full-featured.
+
 **Note:** [[Terminal ZSH]]
 ## Tools
 - Apps: We have many applications such as cmder (Windows), iTerm2 (MacOs),... For me only, I usually WezTerm on MacOS and Linux
