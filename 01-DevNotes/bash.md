@@ -20,4 +20,34 @@ Bash command are mainly supported MacOS, Linux. On Windows, you can use WSL, it'
 - `Ctrl` + `Shift` + `V`: pastes from clipboard.
 - For a long list: `Enter` to continue read, `q` to quit
 - `Ctrl` + `A`: Move cursor to beginning of the line
-## 
+## Multiple commands
+```bash
+# run at once 
+command_1 && command_2
+```
+## `.sh` file
+> [!note+] `#!/bin/bash` tells your terminal to run the script with `bash`. There are also `zsh`, `sh`, `fish`,...
+
+
+> [!multi-column]
+>
+>> [!note]
+>>  ```bash
+>>  #!/bin/sh 
+>>  echo 'some info' 
+>>  command_1 
+>>  command_2 
+>>  # and then sh file.sh
+>> ```
+>
+>> [!note]
+>> ```bash frame="none"
+>> # with arguments 
+>> $file1 = $1 
+>> wc $file1 # word count 
+>> 
+>> # multiple input args 
+>> for FILE1 in "$@"; do 
+>> 	wc $FILE1 
+>> done
+>> ```
