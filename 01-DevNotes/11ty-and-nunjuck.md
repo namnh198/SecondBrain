@@ -140,3 +140,44 @@ postcss --watch main.css -o main_.css --use autoprefixer
 👉 [How to Isolate Bootstrap CSS to Avoid Conflicts (using LESS)](https://formden.com/blog/isolate-bootstrap)
 
 ### TailwindCSS
+```bash
+
+npm install -D tailwindcss postcss autoprefixer
+
+# init tailwind config file
+npx tailwindcss init
+
+```
+
+```jsx title="postcss.config.js"
+module.exports = {
+	plugins: {
+		tailwindcss: {},
+		autoprefixer: {},
+	},
+};
+
+```
+
+```css title="css/tailwind.css"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
+```jsx title="tailwind.config.js" ins={1}
+content: ["./src/**/*.{njk,md}", "./src/**/*.svg",]
+```
+```html title="index.html" ins={2}
+<head>
+	<link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}">
+</head
+```
+```json title="package.json"
+
+"scripts": {
+	"dev:css": "tailwindcss -i css/tailwind.css -o _site/css/tailwind.css --watch --postcss",
+	"build:css": "tailwindcss -i css/tailwind.css -o _site/css/tailwind.css --postcss"
+}
+```
