@@ -52,8 +52,6 @@ npm -v
 npm cache clean -f
 ```
 
-  
-
 ### Shorthand CLI options
 
 - `i`: `install`
@@ -142,6 +140,3 @@ bun run start # run the `start` script
 > # Change the permision to "current user"
 > sudo chown -R $USER ~/.ngrok
 > ```
-
-  
-
