@@ -32,16 +32,17 @@ command_1 && command_2
 > [!multi-column]
 >
 >> [!note]
->>  ```bash
->>  #!/bin/sh 
->>  echo 'some info' 
->>  command_1 
->>  command_2 
->>  # and then sh file.sh
+>> ```shell title="file.sh"
+>> # using script: file.sh
+>> #!/bin/sh 
+>> echo 'some info' 
+>> command_1 
+>> command_2
 >> ```
 >
 >> [!note]
->> ```bash frame="none"
+>> ```bash title="file.sh"
+>> # using script: file.sh
 >> # with arguments 
 >> $file1 = $1 
 >> wc $file1 # word count 
@@ -51,3 +52,10 @@ command_1 && command_2
 >> 	wc $FILE1 
 >> done
 >> ```
+>
+
+```shell frame="none"
+```
+```shell
+NAME="defaut" # default value! DON'T HAVE SPACE!!! # with flags while getopts n:f: option; do case "${option}" in n) NAME=${OPTARG};; f) FILE=${OPTARG};; esac done echo $NAME wc $FILE # how to use? sh test.sh -n "ThiD" -f test.md
+```
