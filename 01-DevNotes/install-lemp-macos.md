@@ -2,6 +2,10 @@
 title: Install LEMP on MacOS
 createDate: 2023-10-29
 published: true
+tags:
+  - MacOS
+  - Web-Dev
+updateDate: 2024-11-10
 ---
 - [x] Setup LEMP (Nginx, MySQL, multiple PHP) on MacOS. In the end, you'll have a robust, clean and fast local web development environment on Mac's M chip or Intel
 
