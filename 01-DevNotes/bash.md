@@ -56,6 +56,40 @@ command_1 && command_2
 
 ```shell frame="none"
 ```
-```shell
-NAME="defaut" # default value! DON'T HAVE SPACE!!! # with flags while getopts n:f: option; do case "${option}" in n) NAME=${OPTARG};; f) FILE=${OPTARG};; esac done echo $NAME wc $FILE # how to use? sh test.sh -n "ThiD" -f test.md
+```shell title="file.sh"
+NAME="defaut" # default value! DON'T HAVE SPACE!!! 
+# with flags 
+while getopts n:f: option; do 
+	case "${option}" 
+		in 
+			n) NAME=${OPTARG};; 
+			f) FILE=${OPTARG};; 
+	esac 
+done 
+
+echo $NAME wc $FILE # how to use? sh test.sh -n "ThiD" -f test.md
 ```
+## Search / grep / sed
+> [!multi-column]
+>
+>>[!note]
+>>```shell
+>># all files / folders containing 'abc' 
+>>ls | grep -i abc  
+>>```
+>
+>>[!note]
+>>```shell
+>># find command lines containing 'abc' 
+>>dpkg -l | grep -i abc
+>>```
+
+> [!note]
+>> ```shell
+>> # search and extract a part of result 
+>> pip show numpy 
+>> # Location: /usr/lib/python3/dist-packages 
+>> pip show numpy | sed -n 's/Location: //p' 
+>> # /usr/lib/python3/dist-packages
+>> ```
+
