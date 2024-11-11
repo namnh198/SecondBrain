@@ -26,7 +26,8 @@ Bash command are mainly supported MacOS, Linux. On Windows, you can use WSL, it'
 command_1 && command_2
 ```
 ## `.sh` file
-> [!note+] `#!/bin/bash` tells your terminal to run the script with `bash`. There are also `zsh`, `sh`, `fish`,...
+> [!note+] 
+> `#!/bin/bash` tells your terminal to run the script with `bash`. There are also `zsh`, `sh`, `fish`,...
 
 
 > [!multi-column]

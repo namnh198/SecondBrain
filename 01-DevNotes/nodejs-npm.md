@@ -14,7 +14,8 @@ tags:
 
 First, need to [install nvm](https://github.com/nvm-sh/nvm) to manage node version.
 
-> [!warning] **For Mac M1 Chipset:** If you want to install Node.Js version ≤ 14, this’s not support the new chipset. To install, you must be install “Rosetta”
+> [!warning]+ 
+> **For Mac M1 Chipset:** If you want to install Node.Js version ≤ 14, this’s not support the new chipset. To install, you must be install “Rosetta”
   
 > [!warning] Below commands are using for mostly Linux/MacOS users
 
@@ -40,21 +41,16 @@ nvm use 18.17.0
 
 ## NPM (Node Package Manager)
 
-  
 
 ```bash
 # Check version
 npm -v
 ```
 
-  
-
 ```bash
 # Clear cache
 npm cache clean -f
 ```
-
-  
 
 ### Shorthand CLI options
 
@@ -144,6 +140,3 @@ bun run start # run the `start` script
 > # Change the permision to "current user"
 > sudo chown -R $USER ~/.ngrok
 > ```
-
-  
-
