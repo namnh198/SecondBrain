@@ -1,11 +1,12 @@
 ---
 title: Git Command
 createDate: 2024-11-16
-published: 
+published: true
 tags:
   - Git
   - Tools
   - Skills
+draft: true
 ---
 > [!example]+ Clone a repo
 > 
@@ -141,5 +142,30 @@ tags:
 > 
 > # mixed - keep working copy and reset index
 > # (all files in commit that come after the chosen commit)
-> # will be kept as unstagged, all unstagged will be kept  
+> # will be kept as unstagged, all unstagged will be kept as they are)
+> git reset --mixed commit_hash 
 > ```
+
+> [!example]+ Revert commit
+> ```shell
+> git revert commit_hash
+> ```
+
+> [!example] Cherry-pick commit
+> ```shell
+> # cherry pick a commit to the current branch
+> git cherry-pick commit_hash
+> 
+> # to another branch
+> git checkout another_branch
+> git cherry-pick commit_hash
+> 
+> # resolve conflicts if any
+> git add file_name
+> git cherry-pick --continue
+> 
+> # abort
+> git cherry-pick --abort
+> ```
+
+*to be continued...*
