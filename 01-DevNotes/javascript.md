@@ -77,5 +77,19 @@ import * as everthing from './calculator.js'; // everything
 import anything from './calculator.js' // import default
 ```
 
-## Declare variables & scope;
+## Declare variables & scope
+```js title="main.js"
+var name; // global scope
+let age; // ES6, block scope (inside {} or function,...)
+const PI = 3.14; // ES6 can't be changed
+```
+
+```js title="main.js"
+function funcName() {
+	let nameInFuc = 'anonymous'; 
+}
+
+console.log(nameInFuc); // undefined due to this variable is declare in function, it can't be called 
+
+```
 
