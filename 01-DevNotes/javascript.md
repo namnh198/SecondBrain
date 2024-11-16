@@ -164,4 +164,5 @@ const f = null || 1; // output 1
 You don't need use `try/catch` in every async/await. You only **need** to do it at the top level
 
 ### Sync vs Async
-- **Sync:** 
+- **Sync:** performed one after the other, in sequence. Each line of code needs to wait for the previous one to finish before proceeding to the next.
+- **Async:** allow multiple tasks to run independently of each other. A task can be initiated and while waiting for it to complete, other tasks can proceed.
