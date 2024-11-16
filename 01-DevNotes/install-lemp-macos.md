@@ -278,12 +278,15 @@ brew install elastic/tap/elasticsearch-full
 brew install openjdk@17
 ```
 **Symlink OpenJDK** so the system Java wrappers can find it. This information is also displayed as a Homebrew “caveat” after installing **OpenJDK**.
+
 ```shell
 sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 ```
+
 ```zsh title=".zshrc"
 export ES_JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/<openjdk-version>/libexec/openjdk.jdk/Contents/Home
 ```
+
 ```yaml title="homebrew.mxcl.elasticsearch-full.plist"
 <key>EnvironmentVariables</key>
 <dict> 
@@ -297,6 +300,10 @@ elasticsearch # option -d to run detach
 
 curl -s http://localhost:9200
 ```
+
+> [!bug]- Troubleshooting
+> - `unable to install elasitcsearch`: Change “plist_options :manual => "elasticsearch” to “@plist_manual = "elasticsearch” on /opt/homebrew/Library/Taps/elastic/homebrew-tap/Formula/elasticsearch-full.rb:68
+> - `elasticsearch fails to start`: add `**xpack.ml.enabled: false**` to `/opt/homebrew/etc/elasticsearch/elasticsearch.yml`
 ## DNSMASQ
 To save yourself the fuss of editing your `hosts` file constantly you can use `dnsmasq`
 ```bash
@@ -307,8 +314,6 @@ sudo mkdir -v /etc/resolver
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 ```
 Start or restart “dnsmasq” (Need to sudo)
-- `unable to install elasitcsearch`: Change “plist_options :manual => "elasticsearch” to “@plist_manual = "elasticsearch” on /opt/homebrew/Library/Taps/elastic/homebrew-tap/Formula/elasticsearch-full.rb:68
-- `elasticsearch fails to start`: add `**xpack.ml.enabled: false**` to `/opt/homebrew/etc/elasticsearch/elasticsearch.yml`
 ```bash
 sudo brew services start dnsmasq
 ```
