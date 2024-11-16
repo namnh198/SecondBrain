@@ -93,15 +93,39 @@ function funcName() {
 console.log(nameInFuc); // undefined
 
 ```
+Difference between `var`, `let`, `const`
 
 > [!multi-column]
 > 
->> [!example] Var Bl
+>> [!example] var scope
 >> ```js
 >> var a = 1;
 >> var a = 2; // ok a = 2 now
 >> a = 5; // ok a = 5 now
 >>```
 >
->> [!]
+>> [!example] let scope
+>> ```js
+>> let c = 1;
+>> let c = 2; // error, this variable is declared
+>> c = 3; // ok, c = 3 now
+>> ```
+
+> [!multi-column]
+> 
+>> [!example] const scope
+>> ```js
+>> const b = 1;
+>> const b = 2; // error
+>> b = 2; // error
+>>```
+>
+>> [!example] const scope
+>> ```js
+>> const s = [1,2,3];
+>> s = [1,2,3,4]; // error
+>> s[1] = 3; // OK
+>> ```
+
+`var` is "function " scope like `log` and `const` are "block" scope 
 
