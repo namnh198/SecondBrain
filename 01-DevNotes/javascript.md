@@ -21,4 +21,40 @@ Open the browser (I use `Brave`), press `F12` to open *Inspect* window, then cho
 - ES6 = ES2015
 - New feature: `Arrow Function`, `Classes`, `Modules`, `Promise`, `Generator`, `let` and `const`
 - Read more about ES on w3schools.
-##
+### Concise things
+```js title="main.js"
+// Concise Object Literal Declaration
+const getMousePosition = (x, y) => ({ x, y});
+```
+
+```js title="main.js"
+// Concise Declarative Functions
+const persons = {
+	name: "Nam Nguyen",
+	sayHello() {
+		return `Hello. My name is ${this.name}`; // Hello. My Name is Nam Nguyen
+	}
+}
+```
+
+### Getters and setters
+```js title="main.js"
+class Book {
+	constructor(author) {
+		this._author = author;
+	}
+
+	// getter
+	get author() {
+		return this._author;
+	}
+
+	// setter
+	set author(author) {
+		this._author = author;
+	}
+}
+
+const book = new Book('anonymous');
+console.log(book.au)
+```
