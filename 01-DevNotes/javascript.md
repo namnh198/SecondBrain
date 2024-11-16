@@ -127,5 +127,24 @@ Difference between `var`, `let`, `const`
 >> s[1] = 3; // OK
 >> ```
 
-`var` is "function " scope like `log` and `const` are "block" scope 
+## Output
+```js
+// print output
+console.log('Hello World');
+
+// print error message
+console.error('Simple Error');
+
+// print warning message
+console.warn('Simple Warning');
+
+// print a table
+console.table({'a': 1, 'b': 2});
+
+// group content in a separate block
+console.group('simple');
+console.log('Output here');
+console.error('Error here');
+console.groupEnd();
+```
 
