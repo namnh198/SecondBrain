@@ -18,8 +18,7 @@ Ask you interview questions for a specific job
 ## Coding
 Explain why a piece of the code isn't working
 
-> [!example] 
-> Why this code is not working
+> [!example]+ Why this code is not working
 > 
 > ```js
 > var x = 5;
@@ -29,8 +28,8 @@ Explain why a piece of the code isn't working
 
 Explain what a piece of code mean
 
-> [!example]
-> What this code does?
+> [!example]+ What this code does?
+> 
 > ```js
 > function addNumber(a,b) {
 > 	return a + b;
