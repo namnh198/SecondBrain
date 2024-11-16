@@ -56,5 +56,26 @@ class Book {
 }
 
 const book = new Book('anonymous');
-console.log(book.au)
+console.log(book.author); // anonymous
 ```
+
+## Export/Import to share code blocks
+```js title="calculator.js"
+const add = (x, y) => x + y;
+const subtract = (x, y) => x - y;
+
+export { add, subtract};
+
+export default function (x, y) {
+	return x + y;
+}
+```
+
+```js title="main.js"
+import { add, subtract } from './calculator.js' // only add, subtract
+import * as everthing from './calculator.js'; // everything
+import anything from './calculator.js' // import default
+```
+
+## Declare variables & scope;
+
