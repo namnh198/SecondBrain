@@ -89,7 +89,19 @@ function funcName() {
 	let nameInFuc = 'anonymous'; 
 }
 
-console.log(nameInFuc); // undefined due to this variable is declare in function, it can't be called 
+
+console.log(nameInFuc); // undefined
 
 ```
+
+> [!multi-column]
+> 
+>> [!example] Var Bl
+>> ```js
+>> var a = 1;
+>> var a = 2; // ok a = 2 now
+>> a = 5; // ok a = 5 now
+>>```
+>
+>> [!]
 
