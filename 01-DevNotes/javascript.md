@@ -176,7 +176,6 @@ console.log('How are you?');
 // Nam
 // How are you?
 ```
-S
 #### Async 
 Asynchronous programming, on the other hand, allow multiple tasks to run independently of each other. A task can be initiated and while waiting for it to complete, other tasks can proceed.
 ```js
@@ -188,4 +187,13 @@ console.log('How are you?');
 // Hi
 // How are you?
 // Nam
+```
+### Time difference `Promise all` && `async...await`
+```js
+const data = await Promise.all([timeout(3000), timeout(2000), timeout(1000)]);
+//                              delay 1       delay 2         delay 3
+// ms ------ 1s ------ 2s ------- 3s
+// ============================== 0 delay 1
+// =================== 0 delay
+
 ```
