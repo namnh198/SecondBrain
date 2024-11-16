@@ -1,7 +1,7 @@
 ---
 title: Javascript
 createDate: 2024-11-16
-published: 
+published: true
 tags:
   - Javascript
 ---
@@ -205,6 +205,6 @@ await timeout(3000); await timeout(2000); await timeout(1000);
 // ===================== 0 delay 1
 // ===================================== 0 delay 2
 // ============================================= 0 delay 3
-// ---
-
+// ============================================= async...await executed 6s
 ```
+**Note:** If there is no data dependency you should use `Promise.all`
