@@ -10,5 +10,6 @@ tags:
 > [!example]+ Clone a repo
 > ```shell
 > git clone <repo-link>
-> 
->```
+> # or using gh
+> ```
+
