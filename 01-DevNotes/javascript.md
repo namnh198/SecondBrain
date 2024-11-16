@@ -147,4 +147,21 @@ console.log('Output here');
 console.error('Error here');
 console.groupEnd();
 ```
+## Special operators
+### `||` vs `??`
+- `||` check `false` values
+- `??` check `null` or `undefined`
+```js
+const a = 0 || 1; // output 1
+const b = 0 ?? 1; // output 0
+const c = false || 1; // output 1
+const d = false ?? 1; // output false
+const e = null || 1; // output 1
+const f = null || 1; // output 1
+```
+## `async`, `await`, `promise`
 
+You don't need use `try/catch` in every async/await. You only **need** to do it at the top level
+
+### Sync vs Async
+- **Sync:** 
