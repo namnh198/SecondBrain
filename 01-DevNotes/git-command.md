@@ -114,5 +114,32 @@ tags:
 
 > [!example]+ Merge
 > ```shell
+> # merge current branch (b1) in (b2)
+> git checkout b2
+> git merge b1
 > 
-```
+> # if there are conflicts -> modify manually and then
+> git add conflict_file_name
+> git commit
+> 
+> # check the commit history
+> git log --graph --decorate --oneline
+> ```
+
+> [!example]+ Reset current branch to a commit
+> ```shell
+> # Soft  - Keep all changes
+> # (all files in commits that come after the chosen commit)
+> # will be kept as staged, all unstagged changes will be kept as they are)
+> git reset --soft commit_hash
+> 
+> # uncommit (undo the recent commit)
+> git reset --soft HEAD~1
+> 
+> # hard - discard all changes 
+> git reset --hard commit_hash
+> 
+> # mixed - keep working copy and reset index
+> # (all files in commit that come after the chosen commit)
+> # will be kept as unstagged, all unstagged will be kept  
+> ```
