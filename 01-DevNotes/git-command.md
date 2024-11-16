@@ -72,5 +72,47 @@ tags:
 > # stage file
 > git add file
 > 
-> # stage 
+> # stage multi-files
+> git add file_1 file_2
+> 
+> # folder
+> git add folder
+>
+> # stage all changes
+> git add .
+> 
+> # unstage file
+> git restore --staged file
+> 
+> # or
+> git reset file
 > ```
+
+> [!example]+ Discard changes
+> ```shell
+> # discard changes in a file
+> git restore file
+> 
+> # discard all changes (unstaged)
+> git restore .
+> 
+> # discard all staged and unstaged
+> git rest --hard # don't apply for newly created files
+>
+> # clean new file
+> git clean -df
+> ```
+
+> [!example]+ Pull
+> ```shell
+> # fetch all
+> git fetch --all
+> 
+> # pull latest commit of branch_name
+> git pull origin branch_name
+> ```
+
+> [!example]+ Merge
+> ```shell
+> 
+```
