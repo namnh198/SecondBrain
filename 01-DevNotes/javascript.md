@@ -162,7 +162,30 @@ const f = null || 1; // output 1
 ## `async`, `await`, `promise`
 
 You don't need use `try/catch` in every async/await. You only **need** to do it at the top level
-
 ### Sync vs Async
-- **Sync:** performed one after the other, in sequence. Each line of code needs to wait for the previous one to finish before proceeding to the next.
-- **Async:** allow multiple tasks to run independently of each other. A task can be initiated and while waiting for it to complete, other tasks can proceed.
+#### Sync
+In synchronous programming, operations are performed one after the other, in sequence. Each line of code needs to wait for the previous one to finish before proceeding to the next.
+  
+```js
+console.log('Hi');
+console.log('Nam');
+console.log('How are you?');
+
+// output
+// Hi
+// Nam
+// How are you?
+```
+S
+#### Async 
+Asynchronous programming, on the other hand, allow multiple tasks to run independently of each other. A task can be initiated and while waiting for it to complete, other tasks can proceed.
+```js
+console.log('Hi');
+setTimeout(() => console.log('Nam'), 3000);
+console.log('How are you?');
+
+// output
+// Hi
+// How are you?
+// Nam
+```
