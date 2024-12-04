@@ -9,7 +9,7 @@ tags:
 ## Basic blocks
 ### Text
 
-**All kinds** of **text** *styling* options are supported. Basic `text` blocks are akin to HTML `<p>` tags. ==Text blocks== also support a **variety** of ~~_**rich**_~~ text formatting options.
+**All kinds** of **text** *styling* options are supported. Basic `text` blocks are akin to HTML `<p>` tags. ==Text blocks== also support a **variety** of ~~**rich**~~ text formatting options.
 ### Quote
 
 > This is an example quote.
