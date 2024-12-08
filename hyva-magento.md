@@ -55,4 +55,14 @@ By default all Magento GraphQL modules are enabled. However, often unused GraphQ
 
 ## Building your theme
 
-The first step is to create a child theme that will contain all your customization
+The first step is to create a child theme that will contain all your customization. 
+Set the parent theme to ``
+
+```
+app/design/frontend/YourCompany/
+├── default/
+│   ├── registration.php
+│   ├── theme.xml
+│   ├── composer.json
+```
+
