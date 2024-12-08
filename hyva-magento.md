@@ -35,6 +35,10 @@ In `developer` mode, the static content will be automatically generate, but in `
 bin/magento config:set customer/catpcha/enable 0
 ```
 
+> [!bug] Hyva theme does not support buit-in minification and bundling
+
+Because Hyva theme has another command to minfy `CSS` and `JS` 
+
 > [!bug]+ Troubleshooting some problems
 > - Hyva theme does not support old Magento Catpcha.
 > - Hyva theme does not support buit-in minification and bundling
