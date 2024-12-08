@@ -56,7 +56,7 @@ By default all Magento GraphQL modules are enabled. However, often unused GraphQ
 ## Building your theme
 
 The first step is to create a child theme that will contain all your customization. 
-Set the parent theme to ``
+Set the parent theme to `Hyva/default`
 
 ```
 app/design/frontend/YourCompany/
@@ -66,3 +66,26 @@ app/design/frontend/YourCompany/
 │   ├── composer.json
 ```
 
+Next, copy the `web` directory will all files from the parent theme `vendor/hyva-themes/magento2-default-theme/web/` to your own child theme `app/design/frontend/YourCompany/default/web/`
+
+```js title="app/design/frontend/YourCompany/default/web/tailwind/tailwind.config.js"
+module.exports = {
+  ...
+  // keep the original settings from tailwind.config.js
+  // only add the path below to the purge > content settings
+  ...
+  content: [
+    // this theme's phtml and layout XML files
+    '../../**/*.phtml',
+    '../../*/layout/*.xml',
+    '../../*/page_layout/override/base/*.xml',
+    // parent theme in Vendor (if this is a child-theme)
+    //'../../../../../../../vendor/hyva-themes/magento2-default-theme/**/*.phtml',
+    //'../../../../../../../vendor/hyva-themes/magento2-default-theme/*/layout/*.xml',
+    //'../../../../../../../vendor/hyva-themes/magento2-default-theme/*/page_layout/override/base/*.xml',
+    // app/code phtml files (if need tailwind classes from app/code modules)
+    //'../../../../../../../app/code/**/*.phtml',
+  ]
+}
+...
+```
