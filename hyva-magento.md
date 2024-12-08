@@ -22,8 +22,16 @@ composer require hyva-themes/magento2-default-theme
 
 # setup magento
 bin/magento setup:upgrade
-bin/magento setup:di:complie
 ```
 
 Switch current theme to `hyva/default` theme: `Content -> Design -> Configuration`
+
+In `developer` mode, the static content will be automatically generate, but in `production` mode, running `bin/magento setup:static-content:deploy` is required.
+
+> [!bug]+ Troubleshooting some problem
+> - Hyva theme does not support old Magento Catpcha. Disabling 
+> - 
+
+
+
 
