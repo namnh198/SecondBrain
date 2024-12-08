@@ -27,10 +27,31 @@ bin/magento setup:upgrade
 Switch current theme to `hyva/default` theme: `Content -> Design -> Configuration`
 
 In `developer` mode, the static content will be automatically generate, but in `production` mode, running `bin/magento setup:static-content:deploy` is required.
+### Troubleshooting
 
-> [!bug]+ Troubleshooting some problem
-> - Hyva theme does not support old Magento Catpcha. Disabling 
-> - 
+> [!bug] Hyva theme does not support old Magento Catcha. Please disable the default Magento Catcha form to work:
+
+```shell
+bin/magento config:set customer/catpcha/enable 0
+```
+
+> [!bug]+ Troubleshooting some problems
+> - Hyva theme does not support old Magento Catpcha.
+> - Hyva theme does not support buit-in minification and bundling
+> ```shell
+> bin/magento config:set dev/template/minify_html 0
+> bin/magento config:set dev/js/merge_files 0
+> bin/magento config:set dev/js/enable_js_bundling 0
+> bin/magento config:set dev/js/minify_files 0
+> bin/magento config:set dev/js/move_script_to_bottom 0
+> bin/magento config:set dev/css/merge_css_files 0
+> bin/magento config:set dev/css/minify_files 0
+> ```
+> - Ensure required GraphQL modules are enabled
+
+
+
+
 
 
 
