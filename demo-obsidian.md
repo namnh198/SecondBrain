@@ -5,7 +5,7 @@ tags:
   - Algorithms
   - Backend
 ---
-- [x] add github action
+- [ ] :LiGithub: Add Github Action
 ## Basic blocks
 ### Text
 
