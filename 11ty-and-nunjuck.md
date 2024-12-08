@@ -36,9 +36,11 @@ Remember that you have only 300 free minutes to build with Free Plan
 |  |- components
 |  |  |- ..
  ```
+
 ```scss title="main.scss"
 @import '../components/navbar'
 ```
+
 ```json title="package.json"
 {
     "scripts": {
@@ -46,6 +48,7 @@ Remember that you have only 300 free minutes to build with Free Plan
     }
 }
  ```  
+
 ```html title="index.html"
 <head>
 	...
@@ -54,6 +57,7 @@ Remember that you have only 300 free minutes to build with Free Plan
 </head>
 ```
 - If you use [rollup](https://rollupjs.org/guide/en/)
+
 ```
 # folder structure
 |- css
@@ -61,9 +65,11 @@ Remember that you have only 300 free minutes to build with Free Plan
 |  |- components
 |  |  |- ..
 ```
+
 ```sass title="main.scss"
 @import "./components/font"; // without extension
 ```
+
 ```json title="package.json"
 {
     "scripts": {
@@ -71,6 +77,7 @@ Remember that you have only 300 free minutes to build with Free Plan
     }
 }
 ```  
+
 ```jsx title="rollup.config.js"
 import scss from "rollup-plugin-scss";
 
