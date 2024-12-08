@@ -68,7 +68,9 @@ app/design/frontend/YourCompany/
 
 Next, copy the `web` directory will all files from the parent theme `vendor/hyva-themes/magento2-default-theme/web/` to your own child theme `app/design/frontend/YourCompany/default/web/`
 
-```js title="app/design/frontend/YourCompany/default/web/tailwind/tailwind.config.js"
+### TailwindCSS
+
+```js title="web/tailwind/tailwind.config.js"
 module.exports = {
   ...
   // keep the original settings from tailwind.config.js
@@ -89,3 +91,24 @@ module.exports = {
 }
 ...
 ```
+
+Once you make a change to your theme, be aware that you have to regenerate your theme's `style.css` file.
+
+```css title="style.css"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+### Generating CSS
+
+```shell
+cd /path/to/project/app/design/frontend/YourCompany/default/web/tailwind/
+
+# for production
+npm run build-prod
+
+# for development
+npm run watch
+```
+
+
