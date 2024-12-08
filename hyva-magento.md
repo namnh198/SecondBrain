@@ -68,7 +68,7 @@ app/design/frontend/YourCompany/
 
 Next, copy the `web` directory will all files from the parent theme `vendor/hyva-themes/magento2-default-theme/web/` to your own child theme `app/design/frontend/YourCompany/default/web/`
 
-### TailwindCSS
+## TailwindCSS
 
 ```js title="web/tailwind/tailwind.config.js"
 module.exports = {
@@ -116,6 +116,7 @@ Please read [[tailwind-related]] to take more information TailwindCSS
 ### CSS Structure
 
 The source CSS files are located in the directory `web/tailwind`
+
 ```
 ./web/tailwind
 ├── components
@@ -125,4 +126,4 @@ The source CSS files are located in the directory `web/tailwind`
 ```
 
 - The `components` directory is for reusable elements such as `button`, `input`, `slides` 
-- The `theme`
+- The `theme/components` directory is intend for larger components or pages, such as categories page, products page, account pages, etc
