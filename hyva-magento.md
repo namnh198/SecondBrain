@@ -111,4 +111,18 @@ npm run build-prod
 npm run watch
 ```
 
+Please read [[tailwind-related]] to take more information TailwindCSS
 
+### CSS Structure
+
+The source CSS files are located in the directory `web/tailwind`
+```
+./web/tailwind
+├── components
+└── theme
+    └── components
+        └── style
+```
+
+- The `components` directory is for reusable elements such as `button`, `input`, `slides` 
+- The `theme`
