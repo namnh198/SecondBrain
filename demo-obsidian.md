@@ -151,4 +151,5 @@ Side by side code and figure
 You also use synced block. Note that, the below sentence is a clone of this sentence.
 You also use synced block. Note that, the below sentence is a clone of this sentence.
 ### Link to other page
-You can use `[[]]` to link to other pages too, for example [[Docker]]
+You can use `[[]]` to link to other pages too, for example [[docker|Docker]]
+
