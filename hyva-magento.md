@@ -52,5 +52,7 @@ bin/magento config:set dev/css/minify_files 0
 > [!missing] Hyva theme makes use of the Magento GraphQL API. Ensure required GraphQL modules are enabled
 
 By default all Magento GraphQL modules are enabled. However, often unused GraphQL modules are disabled in Magento Stores using Luma theme.
-|Module|composer package name|
-|------|
+
+## Building your theme
+
+The first step is to create a child theme that will contain all your customization
