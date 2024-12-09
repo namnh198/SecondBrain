@@ -1,10 +1,5 @@
 ---
-aliases: 
-tags: 
-createDate: 
-draft: false
-hideToc: false
-published: false
-title: 
-updateDate:
+title:{{title}}
+createDate:{{date}}
+updateDate:{{date}}
 ---
