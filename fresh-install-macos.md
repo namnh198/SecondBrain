@@ -71,9 +71,21 @@ brew upgrade
 Checkout Repository: [https://github.com/namnh198/dotfiles](https://github.com/namnh198/dotfiles)
 
 ```shell
+
+# download dotfiles
 git clone https://github.com/namnh198/dotfiles ~/.dotfiles
 
+# go to .dotfiles directory
+cd ~/.dotfiles
+
+# install packages
 brew bundle --file=~/.dotfiles/brew/Brewfile
 
-stow 
+# config zsh
+stow zsh
+
+# config nvim
+stow nvim
+
+...
 ```
