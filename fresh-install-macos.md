@@ -30,3 +30,7 @@ Go to **Keyboard Settings** and then
 2. For Vietnamese Input method, **Don't** choose built-in VN input options. Use [OpenKey](https://open-key.org/) instead (Need to allow this app in *Privacy & Security* if you don't want to turn off *Gate keeper*) because there have uncomfortable underline when we type and I have problem when typing in some apps like Messenger,...
 	- The [OpenKey](https://open-key.org/) support auto switch input method smart: You're using Skype with `V` mode but when you switch to Terminal the input method will be automatically `E` mode
 	- The [OpenKey](https://open-key.org/) support both **Telex** and **VNI** but I recommend you should use **VNI** to avoid conflicts when typing English in `V` mode such as `as => á`, etc
+3. Turn off "Use F1, F2 etc. keys as standard function keys" if you rarely uses them.
+4. Key repeat rate -> Fast, Delay until repeat -> Short to skip delay when holding key
+### Other useful keyboard tips
+1. Enabled "Three finders to drag": **System Settings -> Accessibility -> P
