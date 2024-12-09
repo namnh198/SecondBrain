@@ -36,10 +36,44 @@ Go to **Keyboard Settings** and then
 1. Enabled "Three finders to drag": **System Settings -> Accessibility -> Pointer Control -> Trackpad Options"
 2. Short switch new desktops: **Settings -> Keyboard -> Keyboard Shortcut -> Missing Control** -> Checked all **"Switch to Desktop"**
 3. Cut & paste file: `Cmd + C` -> `Cmd + Option + V`
-## Install CLI Tools
-### Brew
+## Brew
+### Installation
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# After installation, don't forget adding to PATH
+echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
+eval $(/opt/homebrew/bin/brew shellenv)
+```
+
+### Some commands
+
+```shell
+# install package
+brew install package
+
+# install app 
+brew install --cask app
+
+# search package
+brew search package
+
+# list packages need to upgrade
+brew outdated
+
+# upgrade packages
+brew upgrade
+```
+
+## Installation & Configuration CLI Tools
+
+### Installation
+
+```shell
+# install nvim and dependencies packages
+brew install nvim ripgrep fd
+
+
 
 ```
