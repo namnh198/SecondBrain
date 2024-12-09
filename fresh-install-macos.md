@@ -25,4 +25,7 @@ sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallm
 ```
 
 ## Keyboard & Trackpad Settings
-Go
+Go to **Keyboard Settings** and then
+1. Should choose "U.S" instead of "U.S. International" because with the later, we have underline score below special symbols like `"`
+2. For Vietnamese Input method, **Don't** choose built-in VN input options. Use [OpenKey](https://open-key.org/) instead (Need to allow this app in *Privacy & Security* if you don't want to turn off *Gate keeper*) because there have uncomfortable underline when we type and I have problem when typing in some apps like Messenger,...
+	- The [Open]
