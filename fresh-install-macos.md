@@ -68,12 +68,12 @@ brew upgrade
 
 ## Installation & Configuration CLI Tools
 
-### Installation
+Checkout Repository: [https://github.com/namnh198/dotfiles](https://github.com/namnh198/dotfiles)
 
 ```shell
-# install nvim and dependencies packages
-brew install nvim ripgrep fd
+git clone https://github.com/namnh198/dotfiles ~/.dotfiles
 
+brew bundle --file=~/.dotfiles/brew/Brewfile
 
-
+stow 
 ```
