@@ -28,4 +28,5 @@ sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallm
 Go to **Keyboard Settings** and then
 1. Should choose "U.S" instead of "U.S. International" because with the later, we have underline score below special symbols like `"`
 2. For Vietnamese Input method, **Don't** choose built-in VN input options. Use [OpenKey](https://open-key.org/) instead (Need to allow this app in *Privacy & Security* if you don't want to turn off *Gate keeper*) because there have uncomfortable underline when we type and I have problem when typing in some apps like Messenger,...
-	- The [OpenKey](https://open-key.org/) support auto switch input method smart: You're using Skype with Vietnamese mode but when you switch to Terminal the input method will be  
+	- The [OpenKey](https://open-key.org/) support auto switch input method smart: You're using Skype with `V` mode but when you switch to Terminal the input method will be automatically `E` mode
+	- The [OpenKey](https://open-key.org/) support both **Telex** and **VNI** but I recommend you should use **VNI** to avoid conflicts when typing English in `V` mode such as `as => á`, etc
