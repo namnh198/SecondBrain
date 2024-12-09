@@ -33,4 +33,13 @@ Go to **Keyboard Settings** and then
 3. Turn off "Use F1, F2 etc. keys as standard function keys" if you rarely uses them.
 4. Key repeat rate -> Fast, Delay until repeat -> Short to skip delay when holding key
 ### Other useful keyboard tips
-1. Enabled "Three finders to drag": **System Settings -> Accessibility -> P
+1. Enabled "Three finders to drag": **System Settings -> Accessibility -> Pointer Control -> Trackpad Options"
+2. Short switch new desktops: **Settings -> Keyboard -> Keyboard Shortcut -> Missing Control** -> Checked all **"Switch to Desktop"**
+3. Cut & paste file: `Cmd + C` -> `Cmd + Option + V`
+## Install CLI Tools
+### Brew
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+```
