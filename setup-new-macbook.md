@@ -27,7 +27,7 @@ hideToc: true
 
 Modifier key `caplocks` to `ctrl`
 
-![Modifier Key](../00-Attachments/ModifierKey.png)
+![Modifier Key](./_private/images/ModifierKey.png)
 
 - [x] Install dashlane - access to all accounts
 - [x] Remove delay dock
@@ -50,10 +50,10 @@ defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock
   - [x] create new ssh key (can restore from dashlane note)
 - [x] Trackpad setting
 
-![Trackpad Setting](../00-Attachments/TrackpadSetting.png)
+![Trackpad Setting](./_private/images/TrackpadSetting.png)
 
 - [x] Install MacMouseFix
 
-![MacMouseFix](../00-Attachments/MacMouseFix.png)
+![MacMouseFix](./_private/images/MacMouseFix.png)
 
 - [x] Finder settings
