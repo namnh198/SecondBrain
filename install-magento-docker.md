@@ -24,7 +24,7 @@ In this note, we will install Magento version 2.4.6-p2. It's required some equip
 7. Varnish >= 6 (Optional - Handle full page-cache)
 ## Docker
 
-If you do not understand Docker. You can read note firstly: [[Docker]]
+If you do not understand Docker. You can read note firstly: [[docker]]
 
 ### Folder structured
 

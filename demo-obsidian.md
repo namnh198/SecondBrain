@@ -4,12 +4,13 @@ tags:
   - AI
   - Algorithms
   - Backend
+createDate: 2024-11-25
 ---
-- [x] add github action
+- [ ] Add Github Action
 ## Basic blocks
 ### Text
 
-**All kinds** of **text** *styling* options are supported. Basic `text` blocks are akin to HTML `<p>` tags. ==Text blocks== also support a **variety** of ~~_**rich**_~~ text formatting options.
+**All kinds** of **text** *styling* options are supported. Basic `text` blocks are akin to HTML `<p>` tags. ==Text blocks== also support a **variety** of ~~**rich**~~ text formatting options.
 ### Quote
 
 > This is an example quote.
@@ -151,4 +152,5 @@ Side by side code and figure
 You also use synced block. Note that, the below sentence is a clone of this sentence.
 You also use synced block. Note that, the below sentence is a clone of this sentence.
 ### Link to other page
-You can use `[[]]` to link to other pages too, for example [[Docker]]
+You can use `[[]]` to link to other pages too, for example [[docker|Docker]]
+

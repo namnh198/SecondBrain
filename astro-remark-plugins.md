@@ -12,18 +12,24 @@ published: true
 ## Installation
 - First install nodejs
 - Create a astro projects
+
 ```shell
 npm create astro@latest
 ```
+
 You should follow the installation steps given in the theme you choose.
 ## Setup & Deploy
 ## Templating
 ### Using `sass`
+
 Installing `sass` module to compile
+
 ```shell
 npm install sass
 ```
+
 Write stylesheet
+
 ```astro title="src/components/MyComponent.astro"
 <!-- css for inline -->
 <style lang="sass">
@@ -37,11 +43,14 @@ Write stylesheet
 ```
 ### Using `tailwindcss`
 #### Installing
+
 ```shell
 npx astro add tailwind
 ```
 #### Configuration
+
 - ConfigFile: Default the config of tailwind is `tailwind.config.ts` 
+
 ```js title="astro.config.mjs" ins={8}
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
@@ -55,7 +64,9 @@ export default defineConfig({
   ],
 });
 ```
+
 - ApplyBaseStyles: By default, the integrations imports a basic `base.css` file on every page of your project. To disable this behavior, set `applyBaseStyles` to `false`.
+
 ```js title="astro.config.mjs" ins={8}
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
@@ -71,6 +82,7 @@ export default defineConfig({
 ```
 ## Content Collections
 ### Define Collections
+
 ```ts title="src/content/config.ts"
 import { defineCollection } from 'astro:content';
 
@@ -82,6 +94,7 @@ export const collections = {
 };
 ```
 ### Define collection schema
+
 ```ts title="src/content/config.ts"
 import { defineCollection } from 'astro:content';
 import { defineCollection, z } from 'astro:content';
@@ -103,6 +116,7 @@ export const collections = {
 };
 ```
 ### Using content in Astro
+
 ```astro title="src/pages/index.astro"
 ---
 import { getCollection } from 'astro:content';
@@ -117,6 +131,7 @@ const posts = await getCollection('blog');
 </ul>
 ```
 ### Render content to HTML
+
 ```astro title="src/pages/index.astro"
 ---
 import { getEntry } from 'astro:content';
@@ -129,6 +144,7 @@ const { Content } = await post.render();
 ## Framework Components
 Astro supports a variety of popular frameworks including `react`, `preact`, `svelte`, `vue`, `solidjs`, `alpinejs`, `lit` with official integrations. To install it, please follow [this official guide](https://docs.astro.build/en/guides/framework-components/)
 ### Using frameworks
+
 ```astro title="src/pages/index.astro"
 ---
 import MyReactComponent from '../components/react/my-react-component.jsx';
@@ -141,6 +157,7 @@ import MyReactComponent from '../components/react/my-react-component.jsx';
 </html>
 ```
 ### Hydrating interactive Components
+
 ```astro title="src/pages/index.astro"
 ---
 // Example: hydrating framework components in the browser.
@@ -168,6 +185,7 @@ the user scrolls down and the component is visible on the page -->
 Plugins for both Remark and Rehype may be registered in the Markdown or MDX integrations in `astro.config.mjs`. Below, we is and example remark plugins of the markdown
 ### Create a Remark Plugins
 Somewhere in a root project, create a `.mjs` file with the name you like, such as `remark-post-status.mjs`
+
 ```js title="remark-post-status.mjs"
 export function remarkPostStatus () {
 	return function (tree, file) {
@@ -185,6 +203,7 @@ export function remarkPostStatus () {
 	}
 }
 ```
+
 This code will be applied to every markdown file in your project, one at a time. This checks the post is a new post or not if this file was created within 7 days ago and parses to `frontendmatter` of this file.
 
 In order to register this remark plugin with Astro and make it applies to your markdown page, you need to reference its in your `astro.config.mjs` like this:
@@ -206,4 +225,3 @@ export default defineConfig({
 ### List example `remark-plugin`
 - `remark-toc`
 - `remark-reading-time`
-- 
