@@ -2,7 +2,8 @@
 title: Fresh Install Magento
 createDate: 2024-12-10
 updateDate: 2024-12-10
-tags: []
+tags:
+  - MacOS
 draft: false
 published: false
 ---
@@ -99,6 +100,6 @@ stow nvim
 
 ## Other Settings
 
-1. Remove delay dock: `{shell} defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock`
+1. Remove delay dock: `defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock`
 2. Paste as plain text `Cmd + Shift + V`
 3. Cut & Paste file: `Cmd + C -> Cmd + V`
