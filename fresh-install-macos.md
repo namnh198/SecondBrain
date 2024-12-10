@@ -35,7 +35,6 @@ Go to **Keyboard Settings** and then
 ### Other useful keyboard tips
 1. Enabled "Three finders to drag": **System Settings -> Accessibility -> Pointer Control -> Trackpad Options"
 2. Short switch new desktops: **Settings -> Keyboard -> Keyboard Shortcut -> Missing Control** -> Checked all **"Switch to Desktop"**
-3. Cut & paste file: `Cmd + C` -> `Cmd + Option + V`
 ## Brew
 ### Installation
 
@@ -89,3 +88,12 @@ stow nvim
 
 ...
 ```
+
+## Other Settings
+1. Remove delay dock
+
+   ```shell
+   defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock
+   ```
+
+2. Paste as plain text  
