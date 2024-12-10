@@ -96,4 +96,5 @@ stow nvim
    defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock
    ```
 
-2. Paste as plain text  
+2. Paste as plain text `Cmd + Shift + V` 
+3. Cut & Paste file: `Cmd + C -> Cmd + V`
