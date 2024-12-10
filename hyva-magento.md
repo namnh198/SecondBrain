@@ -4,6 +4,8 @@ createDate: 2024-12-08
 tags:
   - Web-Dev
   - Magento
+published: true
+draft: true
 ---
 ## Installation
 

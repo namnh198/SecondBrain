@@ -4,8 +4,8 @@ createDate: 2024-12-10
 updateDate: 2024-12-10
 tags:
   - MacOS
-draft: false
-published: false
+draft: true
+published: true
 ---
 
 > [!warning] This note for me only
