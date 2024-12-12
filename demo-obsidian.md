@@ -78,7 +78,7 @@ $$
 
 This is inline `code` and below are block code with highlighted. Note that, there is a copy button on the top-right corner of the block of code.
 
-```python title="main.py" del={5} ins={4}
+```python showLineNumbers title="main.py" del={5} ins={4}
 def sum_and_div(num1, num2):
   sum_nums = num1 + num2
   div_nums = num1 / num2
