@@ -55,3 +55,60 @@ If you wish to convert multiple issues at once:
 2. Create a new label (in the label overview page — `github.com/username/your-repo/labels`), for example, "comments".
 3. Return to the issues page, select all the pages you want, and then add the label "comments" to them.
 4. Navigate back to the label overview page, where you will see a button "Convert to discussions" next to the label "comments".
+## Using utterances
+Simply follow the [official guide](https://utteranc.es/).
+
+For integration in **Next.js** or in any React site, follow these steps:
+1. Create a hook 
+```tsx
+import { useEffect, useState } from 'react'
+
+const useScript = (params: any) => {
+
+const { url, theme, issueTerm, repo, ref } = params
+
+const [status, setStatus] = useState(url ? 'loading' : 'idle')
+
+useEffect(() => {
+	if (!url) {
+		setStatus('idle')
+		return
+	}
+
+	const script = document.createElement('script')
+	script.src = url
+	script.async = true
+	script.crossOrigin = 'anonymous'
+	script.setAttribute('theme', theme)
+	script.setAttribute('issue-term', issueTerm)
+	script.setAttribute('repo', repo)
+	
+	// Check if the script is already in the document?
+	const existingScript = !!document.getElementsByClassName('utterances')[0] || ref?.current?.firstChild
+	if (existingScript) {
+		setStatus('ready')
+	} else {
+		ref.current?.appendChild(script)
+	}
+
+	const setAttributeStatus = (event: any) => {
+		setStatus(event.type === 'load' ? 'ready' : 'error')
+	}
+
+	script.addEventListener('load', setAttributeStatus)
+	script.addEventListener('error', setAttributeStatus)
+
+	return () => {
+		if (script) {
+			script.removeEventListener('load', setAttributeStatus)
+			script.removeEventListener('error', setAttributeStatus)
+		}
+	}
+}, [url])
+
+	return status
+
+}
+
+export default useScript
+```
