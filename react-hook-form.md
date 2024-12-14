@@ -7,6 +7,7 @@ tags:
   - Node-Js
   - React-Js
 createDate: 2024-08-10
+updateDate: 2024-12-14
 ---
 > [!note]+ References 
 > - [Official Docs](https://react-hook-form.com/) [Github Repo](https://github.com/react-hook-form/react-hook-form)
@@ -43,8 +44,10 @@ Check [this example](https://zod.dev/?id=customize-error-path)
 ## Nếu như `form` không tự validate (chỉ sau khi submit mới validate)
 Check xem có thêm `{ ...field }` vào trong form chưa
 
-```jsx showLineNumber
+```jsx showLineNumbers
 <FormControl>
 	<Input placeholder='Enter something...' { ...field }
 </FormControl>
 ```
+## Zod
+**zod** với react-hook-form: disable 1 control tuỳ thuộc vào 1 control khác (nếu active is true thì ko validate 1 control, ngược lại thì validate nó)
