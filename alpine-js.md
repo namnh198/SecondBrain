@@ -14,7 +14,7 @@ tags:
 ## Installation
 ### Use CDN
 
-```html title="index.html"
+```html showLineNumbers title="index.html" ins={3,6}
 <html>
 <head>
 	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -30,16 +30,36 @@ tags:
 npm install alpinejs
 ```
 
-```js
+```js showLineNumbers title="main.js"
 import Alpine from 'alpinejs'
 window.Alpine = Alpine
 Alpine.start()
 ```
 
-If you use `typescript`, you should define property Alpine for `window` object
 
-```ts title="src/env.d.ts
+## Alpine in Astro
+### Installation
+
+```shell
+npx astro add alpinejs
+```
+
+The `@astrojs/alpine` integrations adds `Alpine` to the global window object. For IDE autocompletion, add the following to your `src/env.d.ts`
+
+```ts title="src/env.d.ts"
 interface Window {
 	Alpine: import('alpinejs').Alpine
 }
+```
+
+### Configuration Options
+You can extend Alpine by setting the `endpoint` option to root-relative
+
+```js title=astro.config.mjs ins={5}
+import { defineConfig } from 'astro/config';
+import alpine from '@astrojs/alpinejs';
+export default defineConfig({
+	// ...
+	integrations: [alpine({ entrypoint: '/src/entrypoint' })],
+});
 ```
