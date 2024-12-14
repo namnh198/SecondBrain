@@ -53,7 +53,9 @@ Because `x-data` is evaluated as a normal Javascript object, you can store objec
 ```html title="index.html"
 <div x-data="{ opened: false, toggle() { this.opened = !this.opened } }">
 	<button @click="toggle()">Toggle Content</button>
-	<div x=
+	<div x-show="opened">
+		Content...
+	</div>
 </div>
 ```
 
@@ -84,6 +86,27 @@ Because `x-data` is evaluated as a normal Javascript object, you can store objec
 </html>
 ```
 
+Parsing **Alpine** data from external `JS` 
+
+```html title="index.html"
+<div x-data="dropdown">
+	<button @click="toggle()">Toggle Content</button>
+	<div x-show="opened">
+		Content...
+	</div>
+</div>
+```
+
+```js title="main.js"
+document.addEventListener('alpine:init', () => {
+	Alpine.data('dropdown', () => ({
+		opened: false,
+		toggle() {
+			this.opened = !this.opened
+		}
+	}))
+})
+```
 ## Alpine in Astro
 ### Installation
 
