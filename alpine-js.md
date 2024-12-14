@@ -121,7 +121,9 @@ List events support:
 
 ### `x-text` & `x-html`
 
-2 attributes
+2 attributes set the content of an element to the result. 
+- `x-text` will be set text content (HTML in content will be escaped)
+- `x-html` will be set the `innerHTML`
 ## Use Plugin
 
 ```html showLineNumbers title="index.html" ins={5, 9-14}
