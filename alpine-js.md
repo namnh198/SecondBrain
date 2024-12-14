@@ -40,9 +40,20 @@ Alpine.start()
 ### `x-data`
 `x-data` defines a chunk of HTML as an Alpine component and provides the reactive data for that component to reference.
 
+Everything in **Alpine** always starts with the `x-data` directive
+
 ```html title="index.html"
-<div x-data="{ message: "Hello Worl" }">
-	<button
+<div x-data="{ message: 'Hello World' }">
+	<div x-text="message"> <!-- output: "Hello world" --></div>
+</div>
+```
+
+Because `x-data` is evaluated as a normal Javascript object, you can store object, method for it
+
+```html title="index.html"
+<div x-data="{ opened: false, toggle() { this.opened = !this.opened } }">
+	<button @click="toggle()">Toggle Content</button>
+	<div x=
 </div>
 ```
 
