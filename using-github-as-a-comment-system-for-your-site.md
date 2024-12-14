@@ -60,6 +60,7 @@ Simply follow the [official guide](https://utteranc.es/).
 
 For integration in **Next.js** or in any React site, follow these steps:
 1. Create a hook 
+   
 ```tsx
 import { useEffect, useState } from 'react'
 
@@ -70,45 +71,70 @@ const { url, theme, issueTerm, repo, ref } = params
 const [status, setStatus] = useState(url ? 'loading' : 'idle')
 
 useEffect(() => {
-	if (!url) {
-		setStatus('idle')
-		return
-	}
-
-	const script = document.createElement('script')
-	script.src = url
-	script.async = true
-	script.crossOrigin = 'anonymous'
-	script.setAttribute('theme', theme)
-	script.setAttribute('issue-term', issueTerm)
-	script.setAttribute('repo', repo)
-	
-	// Check if the script is already in the document?
-	const existingScript = !!document.getElementsByClassName('utterances')[0] || ref?.current?.firstChild
-	if (existingScript) {
-		setStatus('ready')
-	} else {
-		ref.current?.appendChild(script)
-	}
-
-	const setAttributeStatus = (event: any) => {
-		setStatus(event.type === 'load' ? 'ready' : 'error')
-	}
-
-	script.addEventListener('load', setAttributeStatus)
-	script.addEventListener('error', setAttributeStatus)
-
-	return () => {
-		if (script) {
-			script.removeEventListener('load', setAttributeStatus)
-			script.removeEventListener('error', setAttributeStatus)
+		if (!url) {
+			setStatus('idle')
+			return
 		}
-	}
-}, [url])
+	
+		const script = document.createElement('script')
+		script.src = url
+		script.async = true
+		script.crossOrigin = 'anonymous'
+		script.setAttribute('theme', theme)
+		script.setAttribute('issue-term', issueTerm)
+		script.setAttribute('repo', repo)
+		
+		// Check if the script is already in the document?
+		const existingScript = !!document.getElementsByClassName('utterances')[0] || ref?.current?.firstChild
+		if (existingScript) {
+			setStatus('ready')
+		} else {
+			ref.current?.appendChild(script)
+		}
+	
+		const setAttributeStatus = (event: any) => {
+			setStatus(event.type === 'load' ? 'ready' : 'error')
+		}
+	
+		script.addEventListener('load', setAttributeStatus)
+		script.addEventListener('error', setAttributeStatus)
+	
+		return () => {
+			if (script) {
+				script.removeEventListener('load', setAttributeStatus)
+				script.removeEventListener('error', setAttributeStatus)
+			}
+		}
+	}, [url])
 
 	return status
 
 }
 
 export default useScript
+```
+
+2. Use this hook in **a client component** (`'use client'`)
+   
+```js
+'use client' 
+// imports 
+const Comments = () => { 
+	const comment = useRef(null) 
+	const status = useScript({ 
+		url: 'https://utteranc.es/client.js', 
+		theme: 'github-light', 
+		issueTerm: 'title', 
+		repo: 'namnh198/namhoainguyen.com', 
+		ref: comment 
+	}) 
+	return ( 
+		<div className={cn(className, containerNormal, 'mt-8')}> 
+			{status === 'loading' && ( <div>Loading comments...</div> )} 
+			<div ref={comment}></div> 
+		</div> 
+	) 
+} 
+
+export default Comments
 ```
