@@ -11,8 +11,8 @@ tags:
 ## What's Alpine?
 - A modern lightweight Javascript framework - A jQuery replacement
 - Despite being lightweight, it manages to encapsulate almost all the functionalities
-- It also easy to use
 ## Installation
+### Use CDN
 
 ```html title="index.html"
 <html>
@@ -23,4 +23,23 @@ tags:
 	<h1 x-data="{ message: 'Hello Worlds' }" x-text="message"></h1>
 </body>
 </html>
+```
+### Import
+
+```shell
+npm install alpinejs
+```
+
+```js
+import Alpine from 'alpinejs'
+window.Alpine = Alpine
+Alpine.start()
+```
+
+If you use `typescript`, you should define property Alpine for `window` object
+
+```ts title="src/env.d.ts
+interface Window {
+	Alpine: import('alpinejs').Alpine
+}
 ```
