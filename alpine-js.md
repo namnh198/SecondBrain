@@ -1,7 +1,7 @@
 ---
 title: Alpine.Js
 createDate: 2024-12-14
-published: 
+published: true
 draft: true
 tags:
   - Javascript
@@ -36,6 +36,22 @@ window.Alpine = Alpine
 Alpine.start()
 ```
 
+## How to use
+### `x-data`
+`x-data` defines a chunk of HTML as an Alpine component and provides the reactive data for that component to reference.
+
+```html title="index.html"
+<div x-data="{ message: "Hello Worl" }">
+	<button
+</div>
+```
+
+```html title="index.html"
+<div x-data="{ count: 0 }">
+	<button x-on:click="count++">Increment</button>
+	<span x-text="count"></span>
+</div>
+```
 ## Use Plugin
 
 ```html showLineNumbers title="index.html" ins={5, 9-14}
