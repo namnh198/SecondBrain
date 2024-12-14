@@ -16,6 +16,18 @@ createDate: 2024-07-15
 ## How to use giscus
 If you are using plain JS, simply follow the [official guide](https://giscus.app/).
 For those wanting to use it with Web Frameworks like React or Vue, refer to this [giscus-component](https://github.com/giscus/giscus-component).
+### Dynamic theme follow OS mode (Dark or Light)
+
+```js title="main.js"
+// create a script element
+const s = document.createElement('script')
+s.src = 'https://giscus.app/client.js'
+
+// assign attribute to script
+s.setAttribute('')
+const
+```
+
 ### Migrating from utterances
 To integrate **giscus** into your website, follow the instructions provided in the [official guide](https://giscus.app/).
 
