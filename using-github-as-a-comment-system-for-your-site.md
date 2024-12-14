@@ -16,25 +16,25 @@ createDate: 2024-07-15
 ## How to use giscus
 If you are using plain JS, simply follow the [official guide](https://giscus.app/).
 For those wanting to use it with Web Frameworks like React or Vue, refer to this [giscus-component](https://github.com/giscus/giscus-component).
-### Dynamic theme follow OS mode (Dark or Light)
+### Change theme giscus by click toggle theme
 
-```js title="main.js"
-// create a script element
-const s = document.createElement('script')
-s.src = 'https://giscus.app/client.js'
-
-// assign attribute to script
-s.setAttribute('data-repo', '[ENTER YOUR REPO]')
-...
-
-const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-s.setAttribute('data-theme', theme);
-
-// append script to body
-document.body.append(s)
-
-// change theme when
-
+```js showLineNumbers title="main.js"
+// change theme to dark when click toggle-theme
+const toggleTheme = document.querySelector('[toggle-theme]');
+toggleTheme.addEventListener('click', () => {
+	function sendMessage(message) {
+		// check giscus is initial
+		const iframe = document.querySelector('iframe.giscus-frame');
+		if (! iframe) return;
+		// put message to giscus
+		iframe.contentWindow.postMessage({ giscus: message}, 'https://giscus.app');
+	}
+	sendMessage({
+		setConfig: {
+			theme: theme === 'dark' ? 'light' : 'dark'; // Change theme to light if current theme is dark
+		}
+	})
+})
 ```
 
 ### Migrating from utterances
