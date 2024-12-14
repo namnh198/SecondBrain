@@ -65,26 +65,6 @@ Because `x-data` is evaluated as a normal Javascript object, you can store objec
 	<span x-text="count"></span>
 </div>
 ```
-## Use Plugin
-
-```html showLineNumbers title="index.html" ins={5, 9-14}
-<html>
-<head>
-	<!-- .... -->
-	<!-- import collapse script -->
-	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-</head>
-<body>
-	<!-- .... -->
-	<div x-data="{ expanded: false }">
-		<button @click="expanded = !expanded">Toggle Content</button>
-		<p id="foo" x-show="collapse" x-collapse>
-			Lorem ipsum....
-		</p>
-	</div>
-</body>
-</html>
-```
 
 Parsing **Alpine** data from external `JS` 
 
@@ -107,6 +87,45 @@ document.addEventListener('alpine:init', () => {
 	}))
 })
 ```
+
+### `x-on`
+Allowing you easily run code on dispatched DOM events
+
+```html
+<b
+```
+
+### `x-bind`
+
+`x-bind` allows you to set HTML attributes on elements based on the result of JS expressions
+
+```html
+<div x-data="{ placeholder: 'Type here...' }">
+	<input type="text" x-bind:placeholder="placeholder">
+</div>
+```
+
+## Use Plugin
+
+```html showLineNumbers title="index.html" ins={5, 9-14}
+<html>
+<head>
+	<!-- .... -->
+	<!-- import collapse script -->
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+	<!-- .... -->
+	<div x-data="{ expanded: false }">
+		<button @click="expanded = !expanded">Toggle Content</button>
+		<p id="foo" x-show="collapse" x-collapse>
+			Lorem ipsum....
+		</p>
+	</div>
+</body>
+</html>
+```
+
 ## Alpine in Astro
 ### Installation
 
