@@ -24,8 +24,17 @@ const s = document.createElement('script')
 s.src = 'https://giscus.app/client.js'
 
 // assign attribute to script
-s.setAttribute('')
-const
+s.setAttribute('data-repo', '[ENTER YOUR REPO]')
+...
+
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+s.setAttribute('data-theme', theme);
+
+// append script to body
+document.body.append(s)
+
+// change theme when
+
 ```
 
 ### Migrating from utterances
