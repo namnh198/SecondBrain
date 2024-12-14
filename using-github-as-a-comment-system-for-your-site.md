@@ -5,6 +5,7 @@ tags:
   - SSG
 published: true
 createDate: 2024-07-15
+updateDate: 2024-12-14
 ---
 
 > [!todo] In this note, we will explore both [utterances](https://github.com/utterance/utterances) and [giscus](https://github.com/giscus/giscus). However, I prefer **giscus**.
@@ -15,28 +16,30 @@ createDate: 2024-07-15
 - giscus provides wrappers for popular frameworks, unlike utterances, which only uses js (requiring manual implementation, though not overly complicated).
 ## How to use giscus
 If you are using plain JS, simply follow the [official guide](https://giscus.app/).
+
+> [!tip]+ change theme by click toggle theme
+> ```js showLineNumbers title="main.js"
+> // change theme to dark when click toggle-theme
+> const toggleTheme = document.querySelector('[toggle-theme]');
+> toggleTheme.addEventListener('click', () => {
+> 	function sendMessage(message) {
+> 		// check giscus is initial
+> 		const iframe = document.querySelector('iframe.giscus-frame');
+> 		if (! iframe) return;
+> 		// put message to giscus
+> 		iframe.contentWindow.postMessage({ giscus: message}, 'https://giscus.app');
+> 	}
+> 	sendMessage({
+> 		setConfig: {
+> 			theme: theme === 'dark' ? 'light' : 'dark'; // Change theme to light if current theme is dark
+> 		}
+> 	})
+> })
+> ```
+> 
+> Checkout [my component](https://github.com/namnh198/namhoainguyen.com/blob/main/src/components/common/basic-scripts.astro#L61)
+
 For those wanting to use it with Web Frameworks like React or Vue, refer to this [giscus-component](https://github.com/giscus/giscus-component).
-### Change theme giscus by click toggle theme
-
-```js showLineNumbers title="main.js"
-// change theme to dark when click toggle-theme
-const toggleTheme = document.querySelector('[toggle-theme]');
-toggleTheme.addEventListener('click', () => {
-	function sendMessage(message) {
-		// check giscus is initial
-		const iframe = document.querySelector('iframe.giscus-frame');
-		if (! iframe) return;
-		// put message to giscus
-		iframe.contentWindow.postMessage({ giscus: message}, 'https://giscus.app');
-	}
-	sendMessage({
-		setConfig: {
-			theme: theme === 'dark' ? 'light' : 'dark'; // Change theme to light if current theme is dark
-		}
-	})
-})
-```
-
 ### Migrating from utterances
 To integrate **giscus** into your website, follow the instructions provided in the [official guide](https://giscus.app/).
 
