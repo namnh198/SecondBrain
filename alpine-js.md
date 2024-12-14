@@ -8,8 +8,10 @@ tags:
 ---
 ## References
 - [Official Docs](https://alpinejs.dev/start-here)
-## What's Alpine.Js
-Alpine.js is a minimal framework to built-in 
+## What's Alpine?
+- A modern lightweight Javascript framework - A jQuery replacement
+- Despite being lightweight, it manages to encapsulate almost all the functionalities
+- It also easy to use
 ## Installation
 
 ```html title="index.html"
