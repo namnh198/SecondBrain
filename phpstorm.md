@@ -6,7 +6,8 @@ tags:
   - Skills
   - Tools
 ---
- ## Installation
+## Installation
+
 > [!tip] Check official guide to install: [https://www.jetbrains.com/phpstorm/](https://www.jetbrains.com/phpstorm/)
 ## Settings
 ### Fonts
