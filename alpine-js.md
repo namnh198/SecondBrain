@@ -36,6 +36,26 @@ window.Alpine = Alpine
 Alpine.start()
 ```
 
+## Use Plugin
+
+```html showLineNumbers title="index.html" ins={5, 9-14}
+<html>
+<head>
+	<!-- .... -->
+	<!-- import collapse script -->
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+	<!-- .... -->
+	<div x-data="{ expanded: false }">
+		<button @click="expanded = !expanded">Toggle Content</button>
+		<p id="foo" x-show="collapse" x-collapse>
+			Lorem ipsum....
+		</p>
+	</div>
+</body>
+</html>
+```
 
 ## Alpine in Astro
 ### Installation
@@ -62,4 +82,13 @@ export default defineConfig({
 	// ...
 	integrations: [alpine({ entrypoint: '/src/entrypoint' })],
 });
+```
+
+```ts title="src/entrypoint.ts"
+import type { Alpine } from 'alpinejs'
+import intersect from 'alpinejs/intersect'
+
+export default (Alpine: Alpine) => {
+	Alpine.plugin(intersect)
+}
 ```
