@@ -89,12 +89,21 @@ document.addEventListener('alpine:init', () => {
 ```
 
 ### `x-on`
+
 Allowing you easily run code on dispatched DOM events
 
 ```html
-<b
+<button x-on:click="alert('Hello World')">Click to alert</button>
+
+<!-- Shorten -->
+<button @click="alert('Hello World')">Click to alert</button
 ```
 
+List events support:
+- `@keyup`
+- `@keydown`
+- `@click`
+- ...
 ### `x-bind`
 
 `x-bind` allows you to set HTML attributes on elements based on the result of JS expressions
@@ -103,8 +112,16 @@ Allowing you easily run code on dispatched DOM events
 <div x-data="{ placeholder: 'Type here...' }">
 	<input type="text" x-bind:placeholder="placeholder">
 </div>
+
+<!-- Shorten -->
+<div x-data="{ placeholder: 'Type here...' }">
+	<input type="text" :placeholder="placeholder">
+</div>
 ```
 
+### `x-text` & `x-html`
+
+2 attributes
 ## Use Plugin
 
 ```html showLineNumbers title="index.html" ins={5, 9-14}
