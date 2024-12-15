@@ -6,6 +6,11 @@ tags:
   - JDKJSY
 createDate: 2024-08-10
 ---
+## Info & Preface
+
+- Full name: **You Don't Know JS Yet** (2nd edition)
+- Author: **Kyle Simpson**
+- Book: [getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS) on github
 ## Chap 1 - What is JS?
 ### What's with that name?
 - Not related with Java at all but have some superficial resemblances between Js code and Java code because it's a programming language. 
