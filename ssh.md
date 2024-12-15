@@ -51,15 +51,31 @@ Suppose that we wanna connect to a remote host `username@remote.com` from a loca
 ## Connecting
 
 ```shell
-ssh remote_user@hostname.com
+ssh user@hostname.com
 
 # with port != 22
-ssh remote_user@hostname.com -p remote_port
+ssh user@hostname.com -p remote_port
 
 # connect with specific private_key
-ssh -i your_private_key remote_user@hostname.com
+ssh -i your_private_key user@hostname.com
 ```
 
+```shell
+# check version
+ssh -v
 
+# disconnect 
+exit
 
+# copy file local -> remote
+scp local_file user@hostname.com:/remote_path
 
+# download file remote -> local
+scp user@hostname.com:/remote_file local_path
+```
+
+To read more some `SSH` command:
+
+```shell
+man ssh
+```
