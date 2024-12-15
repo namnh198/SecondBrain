@@ -65,6 +65,7 @@ zinit wait lucid light-mode for \
 Install Nerd fonts (It provides for programing hight number icons)
 - Manual: Go to Github Repository -> Choose fonts you want to use -> Download & Install
 - Install by script:
+  
 ```bash frame="none"
 git clone https://github.com/ryanoasis/nerd-fonts.git 
 cd nerd-fonts ./install.sh # (in Powershell run ./install.ps1
@@ -78,12 +79,14 @@ Install themes (Catppuccin Mocha)
 Install starship (theme zsh)
 
 - Add this code below in your `.zshrc`
+  
 ```bash
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 ```
+
 - To get started configuring starship, create the following file: `~/.config/starship.toml`. Follow official guide to configure: [https://starship.rs/config/](https://starship.rs/config/)
 - My Preset starship: [https://raw.githubusercontent.com/namnh198/dotfiles/main/zsh/.config/starship.toml](https://raw.githubusercontent.com/namnh198/dotfiles/main/zsh/.config/starship.toml)
 

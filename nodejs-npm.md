@@ -41,7 +41,6 @@ nvm use 18.17.0
 
 ## NPM (Node Package Manager)
 
-
 ```bash
 # Check version
 npm -v

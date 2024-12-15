@@ -153,4 +153,3 @@ We have a form that can upload file
 ```bash
 curl --form upload=@/home/user/Pictures/wallpaper.jpg --form press=OK [URL]
 ```
-[[Terminal ZSH]]

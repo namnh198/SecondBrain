@@ -22,6 +22,7 @@ Open the browser (I use `Brave`), press `F12` to open *Inspect* window, then cho
 - New feature: `Arrow Function`, `Classes`, `Modules`, `Promise`, `Generator`, `let` and `const`
 - Read more about ES on w3schools.
 ### Concise things
+
 ```js title="main.js"
 // Concise Object Literal Declaration
 const getMousePosition = (x, y) => ({ x, y});
@@ -38,6 +39,7 @@ const persons = {
 ```
 
 ### Getters and setters
+
 ```js title="main.js"
 class Book {
 	constructor(author) {
@@ -60,6 +62,7 @@ console.log(book.author); // anonymous
 ```
 
 ## Export/Import to share code blocks
+
 ```js title="calculator.js"
 const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
@@ -78,6 +81,7 @@ import anything from './calculator.js' // import default
 ```
 
 ## Declare variables & scope
+
 ```js title="main.js"
 var name; // global scope
 let age; // ES6, block scope (inside {} or function,...)
@@ -93,6 +97,7 @@ function funcName() {
 console.log(nameInFuc); // undefined
 
 ```
+
 Difference between `var`, `let`, `const`
 
 > [!multi-column]
@@ -128,6 +133,7 @@ Difference between `var`, `let`, `const`
 >> ```
 
 ## Output
+
 ```js
 // print output
 console.log('Hello World');
@@ -151,6 +157,7 @@ console.groupEnd();
 ### `||` vs `??`
 - `||` check `false` values
 - `??` check `null` or `undefined`
+
 ```js
 const a = 0 || 1; // output 1
 const b = 0 ?? 1; // output 0
@@ -178,6 +185,7 @@ console.log('How are you?');
 ```
 #### Async 
 Asynchronous programming, on the other hand, allow multiple tasks to run independently of each other. A task can be initiated and while waiting for it to complete, other tasks can proceed.
+
 ```js
 console.log('Hi');
 setTimeout(() => console.log('Nam'), 3000);
@@ -189,6 +197,7 @@ console.log('How are you?');
 // Nam
 ```
 ### Time difference `Promise all` && `async...await`
+
 ```js
 const data = await Promise.all([timeout(3000), timeout(2000), timeout(1000)]);
 //                              delay 1       delay 2         delay 3
@@ -207,4 +216,5 @@ await timeout(3000); await timeout(2000); await timeout(1000);
 // ============================================= 0 delay 3
 // ============================================= async...await executed 6s
 ```
+
 **Note:** If there is no data dependency you should use `Promise.all`

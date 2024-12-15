@@ -9,7 +9,7 @@ createDate: 2024-08-20
 
 Bash command are mainly supported MacOS, Linux. On Windows, you can use WSL, it's easy to setup and can use full-featured.
 
-**Note:** [[Terminal ZSH]]
+**Note:** [[terminal-zsh|Terminal ZSH]]
 ## Tools
 - Apps: We have many applications such as cmder (Windows), iTerm2 (MacOs),... For me only, I usually WezTerm on MacOS and Linux
 - Online: [repl.it](https://repl.it/languages/bash)
@@ -21,11 +21,13 @@ Bash command are mainly supported MacOS, Linux. On Windows, you can use WSL, it'
 - For a long list: `Enter` to continue read, `q` to quit
 - `Ctrl` + `A`: Move cursor to beginning of the line
 ## Multiple commands
+
 ```bash
 # run at once 
 command_1 && command_2
 ```
 ## `.sh` file
+
 > [!note+] 
 > `#!/bin/bash` tells your terminal to run the script with `bash`. There are also `zsh`, `sh`, `fish`,...
 
@@ -67,7 +69,8 @@ command_1 && command_2
 >done
 >```
 
-## Search / grep / sed
+## Search/grep/sed
+
 > [!multi-column]
 >
 >>[!note]

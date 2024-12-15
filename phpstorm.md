@@ -7,7 +7,7 @@ tags:
   - Tools
 ---
 ## Installation
-
+ 
 > [!tip] Check official guide to install: [https://www.jetbrains.com/phpstorm/](https://www.jetbrains.com/phpstorm/)
 ## Settings
 ### Fonts
@@ -19,6 +19,7 @@ tags:
 4. Enabled Debug Mode
 **P/S:** If you're using Docker. You need to setup mapping path firstly.
 ## Keyboards Shortcut
+
 > [!tips]
 > List keyboard shortcut that I usually use. If you want more please check on official guide: [https://www.jetbrains.com/help/phpstorm/mastering-keyboard-shortcuts.html](https://www.jetbrains.com/help/phpstorm/mastering-keyboard-shortcuts.html)
 
@@ -31,13 +32,16 @@ tags:
 ### Limit CPU Usage
 By default, PHPStorm allows full CPU usage (100%). Therefore the CPU is overloaded
 - For indexing only
-Go to: Help -> Edit Custom Properties	
+Go to: Help -> Edit Custom Properties
+
 ```shell frame="none"
 caches.indexerThreadsCount=4 
 caches.scanningThreadsCount=4
 ```
+
 - For all (Include Search Files,...)
 Go to: Help → Edit Custom VM Options
+
 ```shell frame="none"
 -XX:ActiveProcessorCount=4
 ```

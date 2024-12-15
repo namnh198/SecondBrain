@@ -10,13 +10,16 @@ tags:
 - ([source](https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction)) Don't use `@apply` just to make things look "cleaner". Otherwise you are basically just writing CSS again and throwing away all of the workflow and maintainability advantages Tailwind gives you.
 - [Play with tailwind](https://arc.net/l/quote/abkcocyk)
 ## `group-hover` with `prefix`
+
 ```html
 <div class="tw-group">
 	<div class="group-hover:tw-bg-slate-500"></div>
 </div>
 ```
 ## `:not` in tailwind
+
 Example: Don't apply `:hover` effect on the `:disabled` button
+
 ```css
 [&:not(:disabled)]:hover:tw-bg-gray-500
 ```
