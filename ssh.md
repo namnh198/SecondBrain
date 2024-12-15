@@ -13,6 +13,7 @@ tags:
 2. Only `private_key` can understand `public_key`
 3. Remote sends message encrypted based on `public_key`
 4. Local has to use `private_key` to understand (decrypt) remote's message
+5. To easy to manage SSH, you can use [Terminus](https://termius.com/) app
 ## Generate a SSH key
 
 ```shell
@@ -46,6 +47,19 @@ ssh-add ~/.ssh/id_rsa_magento_cloud
 ## Add public key to remote
 Suppose that we wanna connect to a remote host `username@remote.com` from a local machine
 1. On local machine, copy public key at `~/.ssh`
-2. On remote server, go to `~/.ssh` open file `authorized_keys` and paste contents of your `public_key`
+2. On remote server, go to `~/.ssh` open file `authorized_keys` and paste contents of your `public_key` to it
+## Connecting
+
+```shell
+ssh remote_user@hostname.com
+
+# with port != 22
+ssh remote_user@hostname.com -p remote_port
+
+# connect with specific private_key
+ssh -i your_private_key remote_user@hostname.com
+```
+
+
 
 
