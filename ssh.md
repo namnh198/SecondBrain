@@ -32,8 +32,20 @@ The default of location **SSH Key**:
    
 ```
 Host magento_cloud
-Hostname *.github.com # match with all subdomain github.com
-IdentityFile ~/.ssh/id_rsa_github
+Hostname *.magento.cloud # match with all subdomain github.com
+IdentityFile ~/.ssh/id_rsa_magento_cloud
 User <your_username>
-...
 ```
+
+3. Add to `ssh-keygen` (Don't need to retype password again)
+
+```shell
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa_magento_cloud
+```
+## Add public key to remote
+Suppose that we wanna connect to a remote host `username@remote.com` from a local machine
+1. On local machine, copy public key at `~/.ssh`
+2. On remote server, go to `~/.ssh` open file `authorized_keys` and paste contents of your `public_key`
+
+
