@@ -10,6 +10,7 @@ updateDate: 2024-08-04
 ---
 - Make your terminal looks like better. A collection of console terminal in serveral operations sytem.
 - In this note, I used [Weterm](https://wezfurlong.org/wezterm/) for MacOS. If you use windows, you can use Windows Terminal + WSL
+- Checkout my dotfiles in [Github Repository](https://github.com/namnh198/dotfiles)
 ## Install zsh + zinit
 ### Install ZSH
 
