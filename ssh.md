@@ -60,6 +60,16 @@ ssh user@hostname.com -p remote_port
 ssh -i your_private_key user@hostname.com
 ```
 
+Some arguments:
+- `i`: Identity File
+- `f`: Request ssh to go to background just before command excution
+- `L`: Local port forwarding
+- `p`: Port
+- `q`: Quiet mode
+- `v`: Verbose mode
+- `X`: Running GUI remote app locally
+- `C`: Use data compression
+  
 ```shell
 # check version
 ssh -v
