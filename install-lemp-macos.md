@@ -23,6 +23,7 @@ updateDate: 2024-11-10
 ### Xcode, Homebrew
 Before starting you need a few tools installed to take the stress out of the setup process
 You will be using the terminal a lot of coming up (I like WezTerm)
+
 ```bash
 # install xcode
 xcode-select-install
@@ -32,6 +33,7 @@ xcode-select-install
 ```
 ### Multiple PHP Version
 Some PHP version deprecated on the default homebrew. Use tab [shivammathur/php](https://github.com/shivammathur/homebrew-php)
+
 ```bash
 brew tap shivammathur/php 
 
@@ -40,7 +42,9 @@ brew install shivammathur/php/php@7.4
 brew install shivammathur/php/php@8.1 
 brew install shivammathur/php/php@8.2
 ```
+
 By default, all PHP version are using port `9000`. We need to change the port for each PHP version to avoid conflict. Path file: `{bash} $(brew --prefix)/etc/<php_version>/php-fpm.d/www.conf`
+
 ```bash title="www.conf" del={1,4,7} ins={2,5,8}
 user = _www
 user = <username>
@@ -51,7 +55,9 @@ group = staff
 listen = 127.0.0.1:9000
 listen = 127.0.0.1:9074 # ex: for php7.4
 ```
+
 If you want to change configure php from path `{bash} $(brew --prefix)/etc/<php_version>/php.ini`{bash} `
+
 ```bash
 # backup php.ini
 
@@ -64,8 +70,10 @@ upload_max_file_size = 10M
 post_max_file_size = 2M
 post_max_file_size = 10M
 ```
+
 **P/S:** After you adjust configure PHP, You must restart `php-fpm`
 Once you are ready, starting up `php-fpm` for each version
+
 ```bash
 brew services start php@7.4
 brew services start php@8.1
@@ -73,17 +81,21 @@ brew services start php@8.2
 ```
 
 Check that you have a configuration correctly
+
 ```bash
 sudo lsof -i -n -P|grep php-fpm
 ```
+
 ![[PHP-FPM.png]]
 #### Alias multiple PHP Version
+
 ```zsh title=".zshrc"
 alias php74 = "$(brew --prefix)/opt/php@7.4/bin/php"
 alias php81 = "$(brew --prefix)/opt/php@8.1/bin/php"
 alias php82 = "$(brew --prefix)/opt/php@8.2/bin/php"
 ```
 #### Switch between multiple PHP Version
+
 ```zsh title=".zshrc"
 function phpv() { 
 	brew unlink php 
@@ -92,21 +104,27 @@ function phpv() {
 }
 ```
 ## Xdebug
+
 ```bash
 brew link --overwrite --force php@8.2 # Switch to PHP 8.2
 pecl install xdebug
 ```
+
 **P/s:** PHP 7.4 only support xdebug <= 3.1.6. You can check it on [xdebug](https://xdebug.org/docs/compat#versions). To install, you must install specifically xdebug version
+
 ```bash
 pecl install xdebug-3.1.6
 ```
+
 **Note:** `pecl no valiable`: The root was caused by SSL certificates is invalid.. To install, we need to download & install package offline. View on [StackOverflow](https://stackoverflow.com/questions/76507083/pecl-install-no-releases-available)
+
 ```bash
 # Install xdebug v3.3.0 
 curl -k -O https://pecl.php.net/get/xdebug-3.3.0.tgz
 pecl install --offline ./xdebug-3.3.0.tgz 
 ```
 ### Setup Xdebug for PHP
+
 ```shell title="php.ini"
 xdebug.mode=debug 
 xdebug.client_port=9003 # port xdebug by default is 9003 
@@ -116,6 +134,7 @@ xdebug.idekey=PHPSTORM xdebug.remote_connect_back=1
 xdebug.max_nesting_level=-1
 ```
 ## Nginx
+
 ```bash
 # Install nginx 
 brew install nginx 
@@ -126,6 +145,7 @@ sudo nginx
 # check nginx is working (default nginx port is 8080)
 curl http://localhost:8080
 ```
+
 ```shell title="nginx.conf" del={1} ins={2}
 #user nobody; 
 user <your-username> staff; 
@@ -167,17 +187,22 @@ http {
 	client_max_body_size 100M; 
 }
 ```
+
 Reload nginx to apply the new config
+
 ```bash
 sudo nginx -s reload
 ```
+
 Go to `http://localhost` to see the result (if the port is different 80, it must be `http://localhost:port`)
 Check the PHP code can work on nginx
+
 ```php title="index.php"
 <?php echo phpinfo(); ?>
 ```
 ### SSL
 Install `mkcert`
+
 ```bash
 brew install mkcert 
 brew install nss # if you use Firefox 
@@ -186,6 +211,7 @@ cd "$(brew --prefix)/etc/nginx/ssl"
 mkcert -install 
 mkcert localhost
 ```
+
 ```shell title="nginx.conf" ins={2-7}
 server { 
 	http2 on; 
@@ -196,13 +222,16 @@ server {
 	ssl_ciphers HIGH:!aNULL:!MD5; 
 }
 ```
+
 Auto redirect HTTPS
+
 ```shell title="nginx.conf" ins={2}
 server {
 	return 301 https://$host$request_uri; 
 }
 ```
 ## MySQL
+
 ```bash
 brew install mysql 
 brew services start mysql 
@@ -210,6 +239,7 @@ brew services start mysql
 # mysql secure installation 
 mysql_secure_installation
 ```
+
 ```shell title="my.cnf"
 # Default Homebrew MySQL server config 
 [mysqld] 
@@ -234,6 +264,7 @@ character-set-server=utf8
 collation-server=utf8_general_ci
 ```
 ### PHPMyadmin
+
 ```bash
 brew install phpmyadmin
 ```
@@ -250,9 +281,11 @@ location /phpmyadmin {
 	} 
 }
 ```
+
 Go to `https://localhost/phpmyadmin`
 Or you can use another DB GUI such as Table Plus, DBeaver, Sequel Ace
 ## Mailhog
+
 ```bash
 brew install mailhog 
 brew services start mailhog 
@@ -260,23 +293,28 @@ brew services start mailhog
 # start with 
 mailhog
 ```
+
 Now, you can access MailHog at `http://localhost:8025`.
 Send a test email and check MailHog
+
 ```shell
 echo "Test email from Postfix" | mail -s "Test Email" hi@example.com
 ```
 Next, update each `php.ini` file with the following, if you have multiple versions of PHP, and then restart `php-fpm`. Note, `test@localhost` should be used but will be overridden by any PHP scripts that run
+
 ```shell title="php.ini"
 sendmail_path = /opt/homebrew/opt/mailhog/bin/MailHog sendmail test@localhost
 ```
 ## ElasticSearch (Need to install Magento 2)
 From Magento Version ≥ 2.4, It has changed MySQL search to Elasticsearch.
 ### Install Elasticsearch & OpenJDK
+
 ```shell
 brew tap elastic/tap 
 brew install elastic/tap/elasticsearch-full 
 brew install openjdk@17
 ```
+
 **Symlink OpenJDK** so the system Java wrappers can find it. This information is also displayed as a Homebrew “caveat” after installing **OpenJDK**.
 
 ```shell
@@ -306,6 +344,7 @@ curl -s http://localhost:9200
 > - `elasticsearch fails to start`: add `**xpack.ml.enabled: false**` to `/opt/homebrew/etc/elasticsearch/elasticsearch.yml`
 ## DNSMASQ
 To save yourself the fuss of editing your `hosts` file constantly you can use `dnsmasq`
+
 ```bash
 brew install dnsmasq
 
@@ -313,11 +352,15 @@ echo 'address=/.test/127.0.0.1' > /opt/homebrew/etc/dnsmasq.conf  # add domain *
 sudo mkdir -v /etc/resolver 
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 ```
+
 Start or restart “dnsmasq” (Need to sudo)
+
 ```bash
 sudo brew services start dnsmasq
 ```
+
 Confirm “dnsmasq” is working with a ping TLDs, one at a time
+
 ```bash
 ping -c 1 test.test
 ```

@@ -7,7 +7,6 @@ tags:
 draft: true
 published: true
 ---
-
 > [!warning] This note for me only
 
 ## Create boot Installer USB

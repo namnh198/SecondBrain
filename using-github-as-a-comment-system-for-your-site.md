@@ -7,7 +7,6 @@ published: true
 createDate: 2024-07-15
 updateDate: 2024-12-14
 ---
-
 > [!todo] In this note, we will explore both [utterances](https://github.com/utterance/utterances) and [giscus](https://github.com/giscus/giscus). However, I prefer **giscus**.
 ## Why choose giscus over utterances?
 - giscus is actively maintained while utterances is not.
